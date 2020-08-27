@@ -1,13 +1,17 @@
-const mongoose = require("mongoose")
+var mongoose = require("mongoose");
+const dotenv = require("dotenv");
+dotenv.config();
 
-mongoose.connect("mongodb://127.0.0.1:27017/Insta",{
-    useNewUrlParser:true,
-    useUnifiedTopology:true,
-    useCreateIndex:true,
-    useFindAndModify:true
-}).then(function(){
-    console.log("Database Connected")
-})
-.catch(function(err){
-    console.error(err)
-});
+mongoose
+    .connect(process.env.MONGODB_URI.replace('<password>', process.env.MONGODB_PASSWORD), {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+        useCreateIndex: true,
+        useFindAndModify: false
+    })
+    .then(function () {
+        console.log("Database connected successfully");
+    })
+    .catch(function (err) {
+        console.log(err.message);
+    });
