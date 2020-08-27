@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,100,300,500);
+
+
+.button {
+  font-weight: 300;
+  color: #fff;
+  font-size: 1.2em;
+  text-decoration: none;
+  border: 1px solid #efefef;
+  padding: .5em;
+  border-radius: 3px;
+  float: left;
+  margin: 6em 0 0 -155px;
+  left: 50%;
+  position: relative;
+  transition: all .3s linear;
+}
+
+.button:hover {
+  background-color: blueviolet;
+  color: #fff;
+}
+
+.ptag {
+  font-size: 2em;
+  text-align: center;
+  font-weight: 100;
+}
+
+.h1tag {
+  text-align: center;
+  font-size: 15em;
+  font-weight: 100;
+  text-shadow: blueviolet 1px 1px, blueviolet 2px 2px, blueviolet 3px 3px, blueviolet 4px 4px, blueviolet 5px 5px, blueviolet 6px 6px, #0062cd 7px 7px, blueviolet 8px 8px, blueviolet 9px 9px, blueviolet 10px 10px, blueviolet 11px 11px, blueviolet 12px 12px, blueviolet 13px 13px, blueviolet 14px 14px, blueviolet 15px 15px, blueviolet 16px 16px, blueviolet 17px 17px, blueviolet 18px 18px, blueviolet 19px 19px, blueviolet 20px 20px, blueviolet 21px 21px, blueviolet 22px 22px, blueviolet 23px 23px, #0064d2 24px 24px, blueviolet 25px 25px, blueviolet 26px 26px, blueviolet 27px 27px, blueviolet 28px 28px, blueviolet 29px 29px, blueviolet 30px 30px, blueviolet 31px 31px, #0065d4 32px 32px;
+}

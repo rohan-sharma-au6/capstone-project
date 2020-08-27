@@ -1,0 +1,13 @@
+.upload-pic {
+    background-color: whitesmoke;
+    width: 500px;
+    padding: 10px;
+    margin: 20px auto;
+    color: black;
+    margin-top: 100px;
+    box-shadow: 5px 5px 20px;
+}
+
+.up-bt {
+    width: 150px
+}

@@ -1,0 +1,174 @@
+.container1 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: whitesmoke;
+    width: 975px;
+    height: 100%;
+    margin-top: 30px;
+    padding-top: 1px;
+}
+
+.profile-info {
+    display: inline-flex;
+    margin-right: 100px;
+    margin-top: 20px
+}
+
+.pro-pic {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: blue solid 5px;
+}
+
+.container2 {
+    margin-right: 50px;
+}
+
+.pro-info {
+    display: flex;
+    margin-top: 40px;
+}
+
+.det {
+    display: flex;
+    flex-direction: column;
+    margin: 30px
+}
+
+.pic-grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 0px auto;
+    margin-right: 20px;
+   
+    
+}
+
+.post {
+    width: 300px;
+    height: 300px;
+    box-shadow: 5px 5px 20px;
+    
+}
+
+.fl-bt{
+    width:200px;
+    height:40px;
+    border:none;
+    box-shadow: 5px 5px 20px;
+    font-size: x-large;
+    border-radius: 10px;
+    margin-left: 50px;
+    background-color:blueviolet;
+    color:whitesmoke;
+    font-weight: bolder;
+}
+
+.un-bt{
+    width:200px;
+    height:40px;
+    border:none;
+    box-shadow: 5px 5px 20px;
+    background-color:orangered;
+    color:whitesmoke;
+    font-size: x-large;
+    border-radius: 10px;
+    margin-left: 50px;
+    font-weight: bolder;
+}
+
+
+.wrapper { 
+width: 1000px;
+margin-right: 60px;
+}       
+
+.wrapper a {
+position: relative;
+text-align: center;
+text-decoration: none;
+width: 300px;
+margin: 10px;
+display: inline-block;
+overflow: hidden; 
+}
+
+.wrapper a::after,
+.wrapper a::before{
+top: 0;
+background-color: rgb(0, 0, 0);
+
+display: block;
+height: 100%;
+opacity: 1;
+position: absolute;
+width: 300px;
+
+} 
+        
+.wrapper a img {
+position: relative;
+z-index: 3;   
+border: none;
+display: block;
+animation: animate-3 500ms ease-in-out forwards;
+}
+
+.wrapper a:before {
+left: 0;
+}
+
+.wrapper a:after {
+right: 0;
+}
+
+.wrapper a img {
+border: none;
+display: block;
+z-index: 1;
+}
+
+.wrapper a:before,
+.wrapper a:after,
+.wrapper a span {
+transition: all 500ms ease; 
+}
+
+.wrapper a span {
+color: black;
+background-color: #ccc;
+bottom: 15%;
+display: block;
+opacity: 0.6;
+
+position: absolute;
+text-align: center;
+text-transform: uppercase;
+width: 300px;
+z-index: 2;
+left: 8%;
+font-family: poppins;
+font-size: 25px;
+transform: scale(0);
+border-radius: 50px;
+}
+
+.wrapper a:hover:before {
+left: -50%;
+}
+
+.wrapper a:hover:after {
+right: -50%;
+}
+a:hover{
+    opacity: 0.5;
+}
+
+.wrapper a:hover span {
+opacity: 1;
+transition: all 500ms ease; 
+transform: scale(1);
+}
