@@ -32,7 +32,7 @@ function App() {
             <Navbar />         
             <Switch >
                 <Route path="/" exact component={LandingPage}/>
-                <Route path="/home" exact>{!user?<Redirect to="/login"/>:<Home/>}</Route>
+                <Route path="/home" exact component={Home} ></Route>
                 <Route path="/signup" exact component={Signup} />
                 <Route path="/login" exact component={Login} />
                 <Route path="/explore" exact component={Explore} />
