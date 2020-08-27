@@ -10,6 +10,7 @@ class Explore extends Component {
 
     }
     componentDidMount() {
+        //to get all posts
         fetch("http://localhost:8080/allpost",
             {
                 method: "get",
