@@ -3,7 +3,7 @@ import { useHistory, Link } from 'react-router-dom';
 import { toast } from "react-toastify"
 import "../style/login.css"
 
-//to add toast
+
 toast.configure()
 
 const Login = () => {

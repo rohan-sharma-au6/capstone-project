@@ -30,7 +30,7 @@ const Uploadstory = () => {
 
 
                     if (data.error) {
-
+                        history.push("/upload")
                         toast.error(data.error + "🔄", {
                             className: "toasti",
                             draggable: false,
@@ -38,13 +38,14 @@ const Uploadstory = () => {
                         })
                     }
                     else {
+                        history.push("/profile")
                         toast.info("uploading", {
                             className: "toasti",
                             draggable: false,
                             position: toast.POSITION.TOP_CENTER,
                             delay: 0
                         })
-
+                        
                         console.log(data)
                     }
                 }).catch(err => {

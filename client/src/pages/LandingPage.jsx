@@ -3,7 +3,7 @@ import img1 from "../images/landing.webp"
 import "../style/landing.css"
 import { useHistory } from 'react-router-dom';
 
-// landing page
+
 const LandingPage = () => {
     const history = useHistory()
     return (

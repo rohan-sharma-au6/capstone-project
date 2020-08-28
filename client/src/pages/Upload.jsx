@@ -35,9 +35,12 @@ const Upload = () => {
                             className: "toasti",
                             draggable: false,
                             position: toast.POSITION.TOP_CENTER
+                            
                         })
+                        history.push("/upload")
                     }
                     else {
+                        history.push("/profile")
                         toast.info("uploading", {
                             className: "toasti",
                             draggable: false,

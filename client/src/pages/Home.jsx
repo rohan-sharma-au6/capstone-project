@@ -6,7 +6,7 @@ import { Icon } from "@blueprintjs/core";
 import { ThemeContext } from '../contexts/ThemeContext';
 
 class Home extends Component {
-// theme Context
+    
     static contextType = ThemeContext
     
     state = {
@@ -23,7 +23,7 @@ class Home extends Component {
 
     }
     componentDidMount() {
-//to get all post of followings
+
         fetch("http://localhost:8080/followingpost",
             {
                 method: "get",
@@ -40,7 +40,6 @@ class Home extends Component {
 
             });
     }
-    //to save post
     savepost = (id) => {
         fetch(`http://localhost:8080/saved/${id}`, {
             method: "post",
@@ -51,14 +50,13 @@ class Home extends Component {
         })
             .then(res => res.json())
             .then(result => {
-        
+                console.log("hjkhj", result)
                 this.setState({ saved: result.user.savedId })
 
 
 
             })
     }
-    //remove from save
     unsavepost = (id) => {
         fetch(`http://localhost:8080/unsaved/${id}`, {
             method: "post",
@@ -76,7 +74,7 @@ class Home extends Component {
 
             })
     }
-//like any post
+
     likepost = (id) => {
         fetch("http://localhost:8080/like", {
             method: "post",
@@ -101,7 +99,7 @@ class Home extends Component {
 
             })
     }
-//unlike any post
+
     unlikepost = (id) => {
         fetch("http://localhost:8080/unlike", {
             method: "post",
@@ -125,7 +123,6 @@ class Home extends Component {
                 this.setState({ caption: post })
             })
     }
-    //to set time of post
      timer(timeStamp) {
 
         // variables
@@ -141,7 +138,7 @@ class Home extends Component {
         else if (time >= 1 && time < 24) return `${parseInt(time)} hrs ago`
         else if (time > 24) return `${parseInt(time/24)} days ago`
     }
-//add comment on post
+
     addComment = (text, postId) => {
         fetch("http://localhost:8080/addcomment", {
             method: "put",
@@ -189,7 +186,11 @@ class Home extends Component {
                                 <img style={{ float: "left",border:theme.ui }} src={item.postedBy.profilePic} className="instagram-card-user-image" alt="" />
                                 <Link to={item.postedBy._id === this.state.user._id ? '/profile' : `/user/${item.postedBy._id}`} style={{ float: "left", marginTop: "7px",color:theme.head }} className="instagram-card-user-name" >{item.postedBy.name}</Link>
                                 <div className="instagram-card-time">{this.timer(item.createdAt)}</div>
-                    
+                                {/* if hrs>24  than days,
+                                if min 60> than hrs 
+                                 */}
+
+
                             </div>
 
                             <hr className="card-hr" />

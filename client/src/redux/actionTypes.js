@@ -1,3 +1,11 @@
 export const SET_USER = "SET_USER"
 export const TOGGLE_AUTH_STATE = "TOGGLE_AUTH_STATE"
 export const LOGOUT_USER = "LOGOUT_USER"
+
+export const ADD_POST ="ADD_POST"
+export const RENDER_POST ="RENDER_POST"
+export const ALL_POST = "ALL_POST"
+export const LIKE ="LIKE"
+export const UNLIKE = "UNLIKE"
+export const COMMENT = "COMMENT"
+export const DELETE = "DELETE"

@@ -110,7 +110,10 @@ class FollowingPost extends Component {
                                 <Link to={`/user/${item.postedBy._id}`} style={{ float: "left", marginTop: "7px" }} className="instagram-card-user-name" >{item.postedBy.name}</Link>
                                 <div className="instagram-card-time">{parseInt(((new Date() / 60000) - (new Date(item.createdAt) / 60000)) / 60)} hr ago</div>
 
-                        
+                                {/* if hrs>24  than days,
+                                if min 60> than hrs 
+                                 */}
+
                             </div>
                             <hr />
 
